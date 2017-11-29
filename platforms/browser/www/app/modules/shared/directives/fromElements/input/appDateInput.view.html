@@ -1,0 +1,5 @@
+<div style="width: 100%" class="form-group col-md-4" ng-class="{'has-error': form[uniqueControlId].$invalid, 'has-success': form[uniqueControlId].$valid}">
+    <label for="{{uniqueControlId}}" class="control-label">{{label}} <span ng-show="form[uniqueControlId].$error.required">(*Required)</span></label>
+    <input type="date" ng-model="model" name="{{uniqueControlId}}" class="form-control" placeholder="{{placeholderText}}" ng-required="required" ng-maxlength="maxlength" />
+    <span class="help-block" ng-show="form[uniqueControlId].$error.maxlength">Max length of {{maxlength}} has been exceeded.</span>
+</div>

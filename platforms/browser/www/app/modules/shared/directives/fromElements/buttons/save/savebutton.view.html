@@ -1,0 +1,9 @@
+<button class="btn btn-primary" ng-disabled="form.$invalid" ng-click="saveAction(item)">
+    <i class="glyphicon glyphicon-cloud-upload" ng-show="form.$valid && !$root.saving" title="Unsaved changes detected. Please save to persist data."></i>
+    <i class="glyphicon glyphicon-repeat spin" ng-show="$root.saving" title="Saving now..."></i>
+    <i class="glyphicon glyphicon-alert" ng-show="form.$invalid" title="The form is INVALID. Please fill in all required fields."></i>
+    <i class="glyphicon glyphicon-ok" ng-show="$root.success" title="We have saved you latest changes."></i>
+    <span ng-show="!$root.saving && !$root.success">Save</span>
+    <span ng-show="$root.success">Saved successfully</span>
+    <span ng-show="$root.saving">Saving...</span>
+</button>

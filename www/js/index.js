@@ -28,6 +28,10 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+        
+        // Bootstrap angular when device is ready.
+        var domElementForAngularApp = document.getElementsByTagName('body');
+        angular.bootstrap(domElementForAngularApp, ["app"]);
     },
 
     // Update DOM on a Received Event

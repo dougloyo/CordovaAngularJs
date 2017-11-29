@@ -1,0 +1,28 @@
+<div class="people">
+    <h1>People list View</h1>
+    <p>Welcome to the People List Viewiew</p>
+    <add-button url="#/people/add"></add-button>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date Of Birth</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="p in ctrl.model.people">
+                <td>{{p.Id}}</td>
+                <td>{{p.FirstName}}</td>
+                <td>{{p.LastName}}</td>
+                <td>{{p.DateOfBirth}}</td>
+                <td>
+                    <edit-button url="#/people/{{p.Id}}/edit"></edit-button>
+                    <delete-button confirm-action="ctrl.delete(p)"></delete-button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
